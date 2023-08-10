@@ -9,9 +9,9 @@ function Home() {
       <h1 className="mb-8  text-xl font-semibold md:text-3xl">
         The best pizza.
         <br />
-        <spna className="text-yellow-500">
+        <p className="text-yellow-500">
           Straight out of the oven, straight to you.
-        </spna>
+        </p>
       </h1>
 
       {username === '' ? (
