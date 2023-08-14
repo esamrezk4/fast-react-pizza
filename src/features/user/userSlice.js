@@ -24,7 +24,7 @@ export const fetchAddress = createAsyncThunk(
     };
 
     const addressObj = await getAddress(position);
-    const address = `${addressObj?.locality}, ${addressObj?.city} ${addressObj?.postcode}, ${addressObj?.countryName}`;
+    const address = `${addressObj?.locality} ${addressObj?.city} ${addressObj?.postcode} ${addressObj?.countryName}`;
 
     return { position, address };
   },

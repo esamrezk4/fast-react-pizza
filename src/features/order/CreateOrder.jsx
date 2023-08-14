@@ -20,7 +20,6 @@ function CreateOrder() {
   const totalCartPrice = useSelector(getTotalCartPrice);
   const priorityPrice = withPriority ? totalCartPrice * 0.2 : 0;
   const totlaPrice = totalCartPrice + priorityPrice;
-  console.log(totlaPrice);
   const {
     username,
     status: addressStatus,
