@@ -9,6 +9,7 @@ import {
 import { getOrder } from '../../services/apiRestaurant';
 import { useFetcher, useLoaderData } from 'react-router-dom';
 import { useEffect } from 'react';
+import UpdateOrder from './UpdateOrder';
 
 function Order() {
   const order = useLoaderData();
@@ -67,7 +68,9 @@ function Order() {
           />
         ))}
       </ul>
-      <div className="space-y-2 bg-stone-200 px-6 py-5">
+
+
+      <div className="space-y-2 bg-stone-200 px-6 py-5 ">
         <p className="text-sm font-medium text-stone-600">
           Price pizza: {formatCurrency(orderPrice)}
         </p>
@@ -79,7 +82,10 @@ function Order() {
         <p className="font-bold">
           To pay on delivery: {formatCurrency(orderPrice + priorityPrice)}
         </p>
+
       </div>
+      {!priority && <UpdateOrder order={order} />}
+
     </div>
   );
 }
